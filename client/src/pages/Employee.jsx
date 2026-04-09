@@ -22,11 +22,11 @@ const Employee = () => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }, []);
+  }, [selectDepartment]);
 
   useEffect(() => {
     fetchEmployee();
-  }, []);
+  }, [fetchEmployee]);
 
   const filtered = employee.filter((emp) =>
     `${emp.firstName} ${emp.lastName} ${emp.position}`
